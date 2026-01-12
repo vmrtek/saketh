@@ -2,12 +2,10 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { 
   Database, 
-  ArrowRight, 
   Server, 
   Shield, 
   BarChart3, 
   Workflow, 
-  Cloud, 
   Zap,
   Layers,
   Lock,

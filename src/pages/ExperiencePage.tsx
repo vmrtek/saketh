@@ -7,7 +7,6 @@ import {
   Briefcase, 
   Award,
   GraduationCap,
-  TrendingUp,
   Building2,
   Clock,
   CheckCircle2,

@@ -13,7 +13,6 @@ import {
   Layers,
   Server,
   Shield,
-  Workflow,
   CheckCircle2,
   Star
 } from 'lucide-react'
