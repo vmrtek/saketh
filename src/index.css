@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-950: #0a0f1a;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  
+  --color-accent-500: #3b82f6;
+  --color-accent-400: #60a5fa;
+  --color-accent-300: #93c5fd;
+  --color-accent-600: #2563eb;
+  
+  --color-teal-500: #14b8a6;
+  --color-teal-400: #2dd4bf;
+  
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-slate-950 text-slate-200 antialiased;
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply font-bold tracking-tight;
+  }
+  
+  ::selection {
+    @apply bg-accent-500/30 text-white;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-600;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-400 to-teal-400 bg-clip-text text-transparent;
+  }
+  
+  .glass-card {
+    @apply bg-slate-800/40 backdrop-blur-xl border border-slate-700/50 rounded-2xl;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-accent-500/25;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-xl border border-slate-700 transition-all duration-300;
+  }
+  
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-slate-300 hover:text-white hover:bg-slate-800/50 font-medium rounded-xl transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
